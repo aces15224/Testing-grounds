@@ -22,7 +22,7 @@ module.exports = function (app) {
 
   app.post("/api/tasks", function(req, res) {
     db.Task.create({
-      task: req.body
+      taskData:req.body
     }).then(function(dbModel) {
       console.log("yes!")
 
