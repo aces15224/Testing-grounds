@@ -24,12 +24,11 @@ var TaskSchema = new Schema({
   dueDate: {
     type: Date,
     default: Date.now
-
   },
   priority: {
     type: String, 
-    enum: ['Daily', 'Weekly', 'Monthly'], 
-    required: false},
+    enum: ['Daily', 'Weekly', 'Monthly']
+  },
     
   category: {
     type: String, 
