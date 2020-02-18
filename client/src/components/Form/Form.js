@@ -35,18 +35,18 @@ const Form = () => {
         let date1=[year, month, day].join('-');
 
         //format current date//
-        var currentDate = new Date (Date.now()),
-        currentMonth = '' + (currentDate.getMonth() + 1),
-        currentDay = '' + currentDate.getDate(),
-        currentYear = currentDate.getFullYear();
-        if (currentMonth.length < 2) currentMonth = '0' + currentMonth;
-        if (currentDay.length < 2) currentDay = '0' + currentDay;
-        let date2=[currentYear, currentMonth, currentDay].join('-');
+        // var currentDate = new Date (Date.now()),
+        // currentMonth = '' + (currentDate.getMonth() + 1),
+        // currentDay = '' + currentDate.getDate(),
+        // currentYear = currentDate.getFullYear();
+        // if (currentMonth.length < 2) currentMonth = '0' + currentMonth;
+        // if (currentDay.length < 2) currentDay = '0' + currentDay;
+        // let date2=[currentYear, currentMonth, currentDay].join('-');
 
         // create object using form data & dropdown
         var taskData = {
             taskItem: taskRef.current.value,
-            createdOn:date2,
+            // createdOn:date2,
             priority:priorityRef.current.value,
             dueDate:date1,
             category: categoryRef.current.value            
