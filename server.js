@@ -62,7 +62,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Mongoose Connection
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://user:password1@ds035517.mlab.com:35517/heroku_fj6klq23";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://user:password1@ds237267.mlab.com:37267/heroku_0n06ck2s";
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true});
  
