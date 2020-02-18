@@ -28,15 +28,15 @@ var TaskSchema = new Schema({
     default: Date.now
 
   },
-  priority: [{
+  priority: {
     type: String, 
     enum: enum1, 
-    required: false}],
+    required: false},
     
-  category: [{
+  category: {
     type: String, 
     enum: enum2, 
-    required: true}]
+    required: true}
 
 });
 
