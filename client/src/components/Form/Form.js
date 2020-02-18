@@ -46,8 +46,6 @@ const Form = () => {
         // create object using form data & dropdown
         var taskData = {
             taskItem: taskRef.current.value,
-            completed:false,
-            saved:false,
             createdOn:date2,
             priority:priorityRef.current.value,
             dueDate:date1,
