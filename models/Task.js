@@ -2,8 +2,6 @@ var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
 
-const enum1 = ['Daily', 'Weekly', 'Monthly'];
-const enum2 = ['Career', 'Education', 'Fitness', 'Personal', 'Health', 'Chores'];
 
 var TaskSchema = new Schema({
   taskItem: {
@@ -30,12 +28,12 @@ var TaskSchema = new Schema({
   },
   priority: {
     type: String, 
-    enum: enum1, 
+    enum: ['Daily', 'Weekly', 'Monthly'], 
     required: false},
     
   category: {
     type: String, 
-    enum: enum2, 
+    enum: ['Career', 'Education', 'Fitness', 'Personal', 'Health', 'Chores'], 
     required: true}
 
 });
