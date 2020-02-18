@@ -27,7 +27,7 @@ var TaskSchema = new Schema({
   },
   priority: [{
     type: String, 
-    enum: ['Low', 'Medium', 'High'], 
+    enum: ['Daily', 'Weekly', 'Monthly'], 
     required: false}],
     
   category: [{

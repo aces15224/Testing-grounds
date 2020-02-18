@@ -83,9 +83,9 @@ const Form = () => {
                 />
                 <select className="custom-select" id="priorityDropDown"ref={priorityRef}  >
                     <option defaultValue>Add a Priority Alert</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="Daily">Daily</option>
+                    <option value="Weekly">Weekly</option>
+                    <option value="Monthly">Monthly</option>
                 </select>
                 <select className="custom-select" id="categoryDropDown"ref={categoryRef} >
                     <option defaultValue>Select a Category</option>

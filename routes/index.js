@@ -14,14 +14,18 @@ module.exports = function (app) {
   // });
 
   app.get("/api/tasks", function(req, res) {
-    db.Task.findAll({}).then(function(dbModel) {
+    db.Task.find({}).then(function(dbModel) {
       res.json(dbModel);
     });
   });
 
 
   app.post("/api/tasks", function(req, res) {
-    db.Task.create(req.body).then(function(dbModel) {
+    db.Task.create({
+      task: req.body
+    }).then(function(dbModel) {
+      console.log("yes!")
+
       res.json(dbModel);
     });
   });
