@@ -30,18 +30,28 @@ const Form = () => {
         month = '' + (d.getMonth() + 1),
         day = '' + d.getDate(),
         year = d.getFullYear();
-
         if (month.length < 2) month = '0' + month;
         if (day.length < 2) day = '0' + day;
-
         let date1=[year, month, day].join('-');
-   
+
+        //format current date//
+        var currentDate = new Date (Date.now()),
+        currentMonth = '' + (currentDate.getMonth() + 1),
+        currentDay = '' + currentDate.getDate(),
+        currentYear = currentDate.getFullYear();
+        if (currentMonth.length < 2) currentMonth = '0' + currentMonth;
+        if (currentDay.length < 2) currentDay = '0' + currentDay;
+        let date2=[currentYear, currentMonth, currentDay].join('-');
+
         // create object using form data & dropdown
         var taskData = {
             taskItem: taskRef.current.value,
+            completed:false,
+            saved:false,
+            createdOn:date2,
             priority:priorityRef.current.value,
-            category: categoryRef.current.value,
-            dueDate:date1 
+            dueDate:date1,
+            category: categoryRef.current.value            
         }
         console.log(taskData)
 ////////////Take out code below upon completion/////////////////

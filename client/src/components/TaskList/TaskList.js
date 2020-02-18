@@ -31,9 +31,9 @@ const complete = () => {
 }
   const getTasks = () => {
     API.getTasks()
-    .then(res => {
-      console.log(JSON.stringify(res))
-      }).catch(err => console.log(err));
+    // .then(res => {
+    //   console.log((res))
+    //   }).catch(err => console.log(err));
 };
   useEffect(() => {
     getTasks();
