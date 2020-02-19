@@ -33,6 +33,6 @@ var TaskSchema = new Schema({
 
 });
 
-var Task = mongoose.model("task", TaskSchema);
+var Task = mongoose.model("Task", TaskSchema);
 
 module.exports = Task;
