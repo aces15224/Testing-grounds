@@ -35,8 +35,9 @@
 // module.exports = db;
 
 module.exports = {
-  Task: require("./Task"),
+  Task: require("./Task")
+  // ,
   // Category: require("./Category"),
-  User: require("./User")
+  // User: require("./User")
 
 };
