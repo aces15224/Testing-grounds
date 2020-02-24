@@ -29,8 +29,14 @@ module.exports = function (app) {
     });
   });
 
+  app.delete("/api/tasks/:key", function(req, res){
+    db.Task.deleteOne({_id: req.params.key}, function(err, result){
+      if (err) {
+        console.log(err)
+      } else {
+        return res.send(true)
+      }
+    });
+  });
+
 }
-
-
-
-
