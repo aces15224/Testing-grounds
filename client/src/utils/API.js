@@ -20,6 +20,11 @@ export default {
     return axios.post("/api/tasks", taskData)
     .then(console.log(taskData))
     .catch(err => console.log(err));
+  },
+  postCategory: function(taskComplete) {
+    return axios.post("/api/completed", taskComplete)
+    .then(console.log(taskComplete))
+    .catch(err => console.log(err));
   }
 };
 
