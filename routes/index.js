@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://user:password1@ds237267.mlab.com:37267/heroku_0n06ck2s";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://user:password1@ds225375.mlab.com:25375/heroku_5b0wf0xm";
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true});
 
@@ -36,6 +36,21 @@ module.exports = function (app) {
       } else {
         return res.send(true)
       }
+    });
+  });
+
+  app.post("/api/completed", function(req, res) {
+    db.Complete.create({
+      category: req.body.category,
+    }).then(function(dbModel) {
+      console.log("yes!")
+      res.json(dbModel);
+    });
+  });
+  
+  app.get("/api/completed", function(req, res) {
+    db.Complete.find({}).then(function(dbModel) {
+      res.json(dbModel);
     });
   });
 
